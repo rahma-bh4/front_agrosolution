@@ -1,0 +1,17 @@
+
+
+    
+    <div class="container">
+    <div *ngIf="recommendationDetail; else errorBlock">
+        <h2>Recommandation pour vous</h2>
+        <p style="color: black;"><strong>Plante :</strong> {{ recommendationDetail.name }}</p>
+        <p style="color: black;"><strong>Description :</strong> {{ recommendationDetail.description }}</p>
+       
+      </div>
+      
+      <ng-template #errorBlock>
+        <div *ngIf="errorMessage">
+          <p style="color: red;">{{ errorMessage }}</p>
+        </div>
+   
+

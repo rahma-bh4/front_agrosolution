@@ -1,0 +1,145 @@
+<body>
+    
+      <div></div>
+      <div></div>
+      <div
+        class="container d-flex justify-content-center align-items-center min-vh-100"
+      >              <form class="mx-1 mx-md-4" [formGroup]="predForm" (ngSubmit)="submit()">
+
+        <!----------------------- Login Container -------------------------->
+        <div class="row border rounded-5 p-3 bg-white shadow box-area">
+          <!--------------------------- Left Box ----------------------------->
+  
+          <div class="titre">
+            <h3 class="titre">Give us informations about your land</h3>
+          </div>
+          <div class="col-md-6 right-box">
+            <div class="row align-items-center">
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+  
+                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                    <label class="form-label">Nitrogen</label>
+                    <input
+                    name="N"
+                      type="number"
+                      name="name"
+                     formControlName="N"
+                      class="form-control"
+                      placeholder="Enter Nitrogen"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                    <label class="form-label">Potassium</label>
+                    <input
+                      type="number"
+                      name="Potassium"
+                      class="form-control"
+                      placeholder="Enter Potassium"
+                      formControlName="K"
+                      name="K"
+                    />
+                  </div>
+                </div>
+  
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                    <label class="form-label">Phosphorus</label>
+                    <input
+                      type="number"
+                      name="Phosphorus"
+                      class="form-control"
+                      placeholder="Enter Phosphorus"
+                      formControlName="P"
+                      name="P"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                    <label class="form-label">Temperature</label>
+                    <input
+                      type="number"
+                      name="temperature"
+                      class="form-control"
+                      placeholder="Enter temperature"
+                      formControlName="temp"
+                      name="temp"
+                    />
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+  
+          <div class="col-md-6 right-box">
+            <div class="row align-items-center">
+              
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                    <label class="form-label">Humidity</label>
+                    <input
+                      type="number"
+                      min="0"
+                      max="100"
+                      name="Humidity"
+                      formControlName="humidity"
+                      class="form-control"
+                      placeholder="Enter Humidity"
+                      name="humidity"
+                    />
+                  </div>
+                </div>
+  
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                    <label class="form-label">Ph</label>
+                    <input
+                      type="number"
+                      min="0"
+                      max="14"
+                      name="Ph"
+                      formControlName="ph"
+                      class="form-control"
+                      placeholder="Enter Ph"
+                      name="ph"
+                    />
+                  </div>
+                </div>
+  
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                    <label class="form-label">Rainfall</label>
+                    <input
+                      type="number"
+                      name="Rainfall"
+                      formControlName="rain"
+                      class="form-control"
+                      placeholder="Enter Rainfall"
+                      name="rain"
+                    />
+                  </div>
+                </div>
+                <br />
+                <div class="input-group mb-3">
+                  <button class="">Send</button>
+                </div>
+             
+            </div>
+          </div>
+        </div>
+      
+    </form>
+  </div>
+  </body>

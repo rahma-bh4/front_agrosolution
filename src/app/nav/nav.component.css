@@ -18,8 +18,10 @@
     top: 0; /* La place en haut de l'image */
     left: 0; /* Aligne à gauche */
     height: 110px; /* Hauteur de la navbar */
-    width: 100%; /* S'assure que la navbar prend toute la largeur */
-     }
+    width: 100%; 
+    /* S'assure que la navbar prend toute la largeur */
+    
+  }
   .custom-navbar .navbar-brand,
   .custom-navbar .nav-link {
     color: #D5D1C6 !important;

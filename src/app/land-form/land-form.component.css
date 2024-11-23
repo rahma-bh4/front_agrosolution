@@ -1,0 +1,73 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ececec;
+}
+
+/*------------ Conteneur de connexion ------------*/
+.box-area {
+    width: 930px;
+  
+}
+
+/*------------ Boîte de droite ------------*/
+.right-box {
+    padding: 40px 30px 40px 40px;
+    
+}
+
+/*------------ Placeholder personnalisé ------------*/
+::placeholder {
+    font-size: 16px;
+}
+
+/*------------ Bordures arrondies ------------*/
+.rounded-4 {
+    border-radius: 20px;
+}
+.rounded-5 {
+    border-radius: 30px;
+}
+
+
+
+button {
+    width: 70%;
+    background-color: #1b87e6; /* Couleur de fond verte */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px 10px 20px ; /* Espacement intérieur */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Pas de soulignement */
+    display: inline-block;
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur de la souris en mode "pointer" */
+  }
+
+button:hover {
+    background-color: #1b87e6; /* Couleur de fond légèrement plus sombre au survol */
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+
+.header-text {
+   
+    font-family: 'Poppins', sans-serif; /* Belle police */
+
+    font-weight: bold; /* Texte en gras */
+    color: #333; /* Couleur du texte */
+    margin: 10px -100px 20px -100px ;
+}
+
+
+.form-control {
+    font-size: 20px; /* Augmente la taille de la police */
+    border-radius: 5px; /* Arrondit légèrement les coins */
+}
+.titre{
+    display: flex; /* Active le mode flexbox */
+    justify-content: center; /* Centre le contenu horizontalement */
+    width: 100%;
+    font-weight: bold !important;
+}

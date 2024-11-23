@@ -19,16 +19,28 @@ ngOnInit(): void {
   this.form=this.formBuilder.group({
     name:['',[Validators.required]],
     email:['',[Validators.required,Validators.email]],
-    password:['',[Validators.required]]
+    password:['',[Validators.required,Validators.minLength(8)]]
   });
 }
 submit():void{
-  this.http.post('http://localhost:8000/api/register', this.form.value, {
-    headers: { 'Content-Type': 'application/json' }
-  }).subscribe(
-    ()=>{
-      this.router.navigate(['/login'])
-    }
+  this.http.post<any>('http://localhost:8000/api/register', this.form.getRawValue()).subscribe(
+      response => {
+        // Vérifiez si la réponse contient un ID utilisateur
+        if (response && response.user_id) {
+          // Enregistrez l'ID utilisateur dans le localStorage
+          localStorage.setItem('user_id', response.user_id);
+          console.log('Utilisateur enregistré, ID :', response.user_id);
+        }
+        
+        // Redirigez l'utilisateur vers la page 'land'
+        this.router.navigate(['/land']);
+      },
+      error => {
+        // Gérer les erreurs
+        console.error('Erreur lors de l\'enregistrement:', error);
+      }
    );
+
+   
 }
 }

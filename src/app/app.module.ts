@@ -9,6 +9,9 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
+import { LandFormComponent } from './land-form/land-form.component';
+import { ContactComponent } from './contact/contact.component';
+import { RecommendationComponent } from './recommendation/recommendation.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +19,10 @@ import { HomeComponent } from './home/home.component';
     ProfileComponent,
     RegisterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    LandFormComponent,
+    ContactComponent,
+    RecommendationComponent
   ],
   imports: [
     BrowserModule,
