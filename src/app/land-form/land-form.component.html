@@ -1,145 +1,166 @@
-<body>
-    
-      <div></div>
-      <div></div>
-      <div
-        class="container d-flex justify-content-center align-items-center min-vh-100"
-      >              <form class="mx-1 mx-md-4" [formGroup]="predForm" (ngSubmit)="submit()">
 
-        <!----------------------- Login Container -------------------------->
-        <div class="row border rounded-5 p-3 bg-white shadow box-area">
-          <!--------------------------- Left Box ----------------------------->
-  
-          <div class="titre">
-            <h3 class="titre">Give us informations about your land</h3>
-          </div>
-          <div class="col-md-6 right-box">
-            <div class="row align-items-center">
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-  
-                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                    <label class="form-label">Nitrogen</label>
-                    <input
-                    name="N"
-                      type="number"
-                      name="name"
-                     formControlName="N"
-                      class="form-control"
-                      placeholder="Enter Nitrogen"
-                    />
-                  </div>
+<body>
+  <form>
+    <div></div>
+    <div></div>
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <!----------------------- Login Container -------------------------->
+      <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <!--------------------------- Left Box ----------------------------->
+
+        <div class="titre">
+          <h3 class="">Give us informations about your land</h3>
+        </div>
+        <div class="col-md-6 right-box">
+          <div class="row align-items-center">
+            <form class="mx-1 mx-md-4">
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+
+                <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                  <label class="form-label">Nitrogen</label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="140"
+                    step="0.1"
+                    name="Nitrogen"
+                    formControlName="Nitrogen"
+                    class="form-control"
+                    value="0" 
+                    oninput="this.nextElementSibling.value = this.value"
+                  />
+                  <output>0</output>
                 </div>
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                    <label class="form-label">Potassium</label>
-                    <input
-                      type="number"
-                      name="Potassium"
-                      class="form-control"
-                      placeholder="Enter Potassium"
-                      formControlName="K"
-                      name="K"
-                    />
-                  </div>
+              </div>
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                  <label class="form-label">Potassium</label>
+                  <input
+                    type="range"
+                    min="5"
+                    max="205"
+                    step="0.1"
+                    name="Potassium"
+                    class="form-control"
+                    value="5" 
+                    oninput="this.nextElementSibling.value = this.value"
+                  />
+                  <output>5</output>
                 </div>
-  
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                    <label class="form-label">Phosphorus</label>
-                    <input
-                      type="number"
-                      name="Phosphorus"
-                      class="form-control"
-                      placeholder="Enter Phosphorus"
-                      formControlName="P"
-                      name="P"
-                    />
-                  </div>
+              </div>
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                  <label class="form-label">Phosphorus</label>
+                  <input
+                    type="range"
+                    min="5"
+                    max="145"
+                    step="0.1"
+                    name="Phosphorus"
+                    class="form-control"
+                    value="5" 
+                    oninput="this.nextElementSibling.value = this.value"
+                  />
+                  <output>5</output>
                 </div>
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                    <label class="form-label">Temperature</label>
-                    <input
-                      type="number"
-                      name="temperature"
-                      class="form-control"
-                      placeholder="Enter temperature"
-                      formControlName="temp"
-                      name="temp"
-                    />
-                  </div>
+              </div>
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                  <label class="form-label">Temperature</label>
+                  <input
+                    type="range"
+                    min="8.8"
+                    max="44"
+                    step="0.1"
+                    name="temperature"
+                    class="form-control"
+                    value="10" 
+                    oninput="this.nextElementSibling.value = this.value"
+                  />
+                  <output>8.8</output>
                 </div>
-              
-            </div>
-          </div>
-  
-          <div class="col-md-6 right-box">
-            <div class="row align-items-center">
-              
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                </div>
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                    <label class="form-label">Humidity</label>
-                    <input
-                      type="number"
-                      min="0"
-                      max="100"
-                      name="Humidity"
-                      formControlName="humidity"
-                      class="form-control"
-                      placeholder="Enter Humidity"
-                      name="humidity"
-                    />
-                  </div>
-                </div>
-  
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                    <label class="form-label">Ph</label>
-                    <input
-                      type="number"
-                      min="0"
-                      max="14"
-                      name="Ph"
-                      formControlName="ph"
-                      class="form-control"
-                      placeholder="Enter Ph"
-                      name="ph"
-                    />
-                  </div>
-                </div>
-  
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                    <label class="form-label">Rainfall</label>
-                    <input
-                      type="number"
-                      name="Rainfall"
-                      formControlName="rain"
-                      class="form-control"
-                      placeholder="Enter Rainfall"
-                      name="rain"
-                    />
-                  </div>
-                </div>
-                <br />
-                <div class="input-group mb-3">
-                  <button class="">Send</button>
-                </div>
-             
-            </div>
+              </div>
+            </form>
           </div>
         </div>
-      
-    </form>
-  </div>
-  </body>
+
+        <div class="col-md-6 right-box">
+          <div class="row align-items-center">
+            <form class="mx-1 mx-md-4">
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+              </div>
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                  <label class="form-label">Humidity</label>
+                  <input
+                    type="range"
+                    min="14"
+                    max="99.9"
+                    step="0.1"
+                    name="Humidity"
+                    formControlName="Humidity"
+                    class="form-control"
+                    value="14" 
+                    oninput="this.nextElementSibling.value = this.value"
+                  />
+                  <output>14</output>
+                </div>
+              </div>
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                  <label class="form-label">Ph</label>
+                  <input
+                    type="range"
+                    min="3.5"
+                    max="9.9"
+                    name="Ph"
+                    step="0.1"
+                    formControlName="Ph"
+                    value="3.5" 
+                    class="form-control"
+                    oninput="this.nextElementSibling.value = this.value"
+                  />
+                  <output>3.5</output>
+                </div>
+              </div>
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                  <label class="form-label">Rainfall</label>
+                  <input
+                    type="range"
+                    min="20.2"
+                    max="298.5"
+                    step="0.1"
+                    name="Rainfall"
+                    formControlName="Rainfall"
+                    class="form-control"
+                    value="20.2" 
+                    oninput="this.nextElementSibling.value = this.value"
+                  />
+                  <output>20.2</output>
+                </div>
+              </div>
+              <br />
+              <div class="input-group mb-3">
+                <button class="btn-success">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
