@@ -1,23 +1,25 @@
+<body>
+  <!-- Couche transparente -->
+  <div class="overlay"></div>
 
-
-    <body >
-      
-   
+  <!-- Contenu principal -->
   <div class="container">
-  <div *ngIf="recommendationDetail; else errorBlock">
-        <h2>Recommendation for you</h2>
-        <p style="text-transform: capitalize;"><span>Plant :</span> {{ recommendationDetail.name }}</p>
-        <div style="text-align: center;">
-        <img src="{{recommendationDetail.image}}" alt=""></div><br><br>
-        <p ><span>Description :</span> {{ recommendationDetail.description }}</p>
-
-       
+    <div *ngIf="recommendationDetail; else errorBlock">
+      <h2>Recommendation for you</h2>
+      <p style="text-transform: capitalize; font-size: 20px;">
+        <span>Plant :</span> {{ recommendationDetail.name }}
+      </p>
+      <div>
+        <img src="{{ recommendationDetail.image }}" alt="">
+      </div><br><br>
+      <p>
+        <span>Description :</span> {{ recommendationDetail.description }}
+      </p>
+    </div>
+    <ng-template #errorBlock>
+      <div *ngIf="errorMessage">
+        <p style="color: red;">{{ errorMessage }}</p>
       </div>
-      <ng-template #errorBlock>
-        <div *ngIf="errorMessage">
-          <p style="color: red;">{{ errorMessage }}</p>
-        </div>
-        </ng-template> </div>
-        </body>
-       
-
+    </ng-template>
+  </div>
+</body>

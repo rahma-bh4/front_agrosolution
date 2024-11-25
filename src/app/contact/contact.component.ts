@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
-
+email:string="bo.brcmarh@iresa.agrinet.tn";
+title = 'Agrosolution';
+  myimage:string="assets/logo.png";
+  im:string="assets/phoo.jpg"
 }
