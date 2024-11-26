@@ -1,6 +1,6 @@
 
 <body>
-  <form>
+  <form [formGroup]="predForm" (ngSubmit)="submit()">
     <div></div>
     <div></div>
     <div
@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-6 right-box">
           <div class="row align-items-center">
-            <form class="mx-1 mx-md-4">
+            
               <div class="d-flex flex-row align-items-center mb-4">
                 <i class="fas fa-user fa-lg me-3 fa-fw"></i>
 
@@ -26,8 +26,8 @@
                     min="0"
                     max="140"
                     step="0.1"
-                    name="Nitrogen"
-                    formControlName="Nitrogen"
+                    name="N"
+                   
                     class="form-control"
                     value="0" 
                     oninput="this.nextElementSibling.value = this.value"
@@ -44,7 +44,7 @@
                     min="5"
                     max="205"
                     step="0.1"
-                    name="Potassium"
+                    name="K"
                     class="form-control"
                     value="5" 
                     oninput="this.nextElementSibling.value = this.value"
@@ -62,7 +62,7 @@
                     min="5"
                     max="145"
                     step="0.1"
-                    name="Phosphorus"
+                    name="P"
                     class="form-control"
                     value="5" 
                     oninput="this.nextElementSibling.value = this.value"
@@ -79,7 +79,7 @@
                     min="8.8"
                     max="44"
                     step="0.1"
-                    name="temperature"
+                    name="temp"
                     class="form-control"
                     value="10" 
                     oninput="this.nextElementSibling.value = this.value"
@@ -87,13 +87,13 @@
                   <output>8.8</output>
                 </div>
               </div>
-            </form>
+            
           </div>
         </div>
 
         <div class="col-md-6 right-box">
           <div class="row align-items-center">
-            <form class="mx-1 mx-md-4">
+            
               <div class="d-flex flex-row align-items-center mb-4">
                 <i class="fas fa-user fa-lg me-3 fa-fw"></i>
               </div>
@@ -106,8 +106,8 @@
                     min="14"
                     max="99.9"
                     step="0.1"
-                    name="Humidity"
-                    formControlName="Humidity"
+                    name="humidity"
+                   
                     class="form-control"
                     value="14" 
                     oninput="this.nextElementSibling.value = this.value"
@@ -124,9 +124,9 @@
                     type="range"
                     min="3.5"
                     max="9.9"
-                    name="Ph"
+                    name="ph"
                     step="0.1"
-                    formControlName="Ph"
+                   
                     value="3.5" 
                     class="form-control"
                     oninput="this.nextElementSibling.value = this.value"
@@ -144,8 +144,8 @@
                     min="20.2"
                     max="298.5"
                     step="0.1"
-                    name="Rainfall"
-                    formControlName="Rainfall"
+                    name="rain"
+                   
                     class="form-control"
                     value="20.2" 
                     oninput="this.nextElementSibling.value = this.value"
@@ -157,7 +157,7 @@
               <div class="input-group mb-3">
                 <button class="btn-success">Send</button>
               </div>
-            </form>
+            
           </div>
         </div>
       </div>

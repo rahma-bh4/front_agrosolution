@@ -94,7 +94,7 @@ export class LandFormComponent implements OnInit{
         
 
         submit() {
-          if (this.predForm.valid) {
+          
             // Récupérer l'ID utilisateur depuis le localStorage
             const userId = localStorage.getItem('user_id'); // Vérification de l'existence de l'ID
             console.log("L'ID utilisateur récupéré est :", userId);
@@ -106,9 +106,17 @@ export class LandFormComponent implements OnInit{
       
             // Préparer les données à envoyer au backend
             const formData = { 
-              ...this.predForm.value, 
+              N:Number(this.predForm.value.N),
+              K:Number(this.predForm.value.K),
+              P: Number(this.predForm.value.P),
+              temp:Number(this.predForm.value.temp), 
+              humidity:Number(this.predForm.value.humidity),
+              ph:Number(this.predForm.value.ph),
+              rain:Number(this.predForm.value.rain),
+
               user_id: Number(userId) // Convertir l'ID en entier
             };
+           
       
             console.log('Données envoyées au backend :', formData);
       
@@ -134,9 +142,7 @@ export class LandFormComponent implements OnInit{
                 this.errorMessage = 'Une erreur est survenue lors de la prédiction.';
               }
             });
-          } else {
-            this.errorMessage = 'Veuillez remplir tous les champs correctement.';
-          }
+         
         }
        
     
